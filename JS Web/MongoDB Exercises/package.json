@@ -1,0 +1,21 @@
+{
+  "name": "mongodb-exercises",
+  "version": "0.0.1",
+  "description": "MongoDB Exercises",
+  "main": "index.js",
+  "engine": {
+    "node": "7.1.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mongodb"
+  ],
+  "author": "KV",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "2.2.28",
+    "mongoose": "4.10.4"
+  }
+}

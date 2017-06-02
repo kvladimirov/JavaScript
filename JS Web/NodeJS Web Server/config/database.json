@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Jaguar",
+    "imageUrl": "/content/images/0/H1d8ZanZ-.jpg",
+    "id": 1
+  },
+  {
+    "name": "Ford",
+    "imageUrl": "/content/images/1/B15O-a3bZ.jpg",
+    "id": 2
+  },
+  {
+    "name": "BMW",
+    "imageUrl": "/content/images/2/S1iF-a2ZZ.jpg",
+    "id": 3
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "name": "storage",
+  "version": "0.0.1",
+  "description": "Storing data",
+  "main": "index.js",
+  "engine": {
+    "node": "7.1.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "storage"
+  ],
+  "author": "KV",
+  "license": "MIT",
+  "dependencies": {
+    "standard": "10.0.2"
+  }
+}

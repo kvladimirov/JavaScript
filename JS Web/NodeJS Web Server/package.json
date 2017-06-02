@@ -1,0 +1,30 @@
+{
+  "name": "web-server",
+  "version": "0.0.1",
+  "description": "Demo web server",
+  "main": "index.js",
+  "engine": {
+    "node": "7.1.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "web",
+    "server"
+  ],
+  "author": "KV",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "1.8.0",
+    "del": "2.2.2",
+    "exact": "0.8.0",
+    "formidable": "1.1.1",
+    "gulp": "3.9.1",
+    "gulp-htmlmin": "3.0.0",
+    "gulp-uglify": "3.0.0",
+    "mongodb": "2.2.27",
+    "mongoose": "4.10.4",
+    "shortid": "2.2.8"
+  }
+}
