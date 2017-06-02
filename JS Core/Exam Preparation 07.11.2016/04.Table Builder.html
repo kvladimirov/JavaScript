@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Builder</title>
+    <style>td,th { background:#DDD; padding:5px }</style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div id="main"></div>
+<script>
+    function tableBuilder(selector) {
+        $(selector).empty();
+        function htmlEscape(text) {
+            text = new String(text);
+            let map = { '"': '&quot;', '&': '&amp;',
+                "'": '&#39;', '<': '&lt;', '>': '&gt;' };
+            return text.replace(/[\"&'<>]/g, ch => map[ch]);
+        }
+        return {
+            createTable: function (columnNames) {
+                let table = $('<table class="myTable">');
+                let tr = $('<tr>');
+
+                for(let columnName of columnNames){
+                    let th = $(`<th>${htmlEscape(columnName)}</th>`);
+                    tr.append(th);
+                }
+                tr.append('<th>Action</th>');
+
+                table.append(tr);
+                $(selector).append(table);
+            },
+            fillData: function (dataRows) {
+                let table = $('.myTable');
+                for(let row of dataRows){
+                    let tr = $('<tr>');
+                    let deleteBtn = $(`<td><button>Delete</button></td>`).click(deleteRow);
+                    for(let singleInfo of row){
+                        let td = $(`<td>${htmlEscape(singleInfo)}</td>`);
+                        tr.append(td);
+                    }
+                    tr.append(deleteBtn);
+                    table.append(tr);
+                }
+                function deleteRow() {
+                    let row = $(this).parent();
+                    row.remove();
+                }
+            }
+        }
+    }
+</script>
+<script>
+    $(function() {
+        let builder = tableBuilder("#main");
+        builder.createTable(['Name', 'Town']);
+        builder.fillData([
+            ['Maria', 'Sofia'],
+            ['Kiril', 'Varna'],
+            ['Ani <new>', 'Ruse'],
+        ]);
+    });
+</script>
+</body>
+</html>

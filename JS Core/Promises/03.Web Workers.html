@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Workers</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+<button onclick="resetWorker()">Reset Worker</button>
+<script>
+    let worker = undefined;
+    function startWorker() {
+        worker = new Worker("counter-web-worker.js");
+        worker.onmessage = function(event) {
+            $("#result").text(event.data);
+        };
+    }
+    function stopWorker() {
+        if (worker) {
+            worker.terminate();
+            worker = undefined;
+        }
+    }
+
+    function resetWorker() {
+        if (worker)
+            worker.postMessage('reset');
+    }
+</script>
+
+
+</body>
+</html>
