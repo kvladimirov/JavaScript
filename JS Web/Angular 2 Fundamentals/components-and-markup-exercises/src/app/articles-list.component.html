@@ -1,0 +1,11 @@
+<h1>Articles</h1>
+<ul class="articles">
+  <li *ngFor='let article of articles' [class.selected]="article === selectedArticle" (click)='selectArticle(article)'>
+    <span class="badge">{{article.id}}</span>{{article.title}}
+  </li>
+</ul>
+
+<article-details *ngIf='selectedArticle' [article]='selectedArticle'></article-details>
+
+
+

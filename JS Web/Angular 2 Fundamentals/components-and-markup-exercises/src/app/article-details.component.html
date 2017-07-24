@@ -1,0 +1,24 @@
+<article>
+  <div>
+  <label>Background Color: </label>
+  <select (change)="onChange($event.target.value)">
+    <option *ngFor="let i of colours">{{i}}</option>
+  </select>
+  <label>Text Color: </label>
+  <select (change)="onChangeText($event.target.value)">
+    <option *ngFor="let i of coloursForText">{{i}}</option>
+  </select>
+  <label>Font Size: </label>
+  <button (click)="add()">+</button>
+  <button (click)="subtract()">-</button>
+</div>
+<div [ngStyle]="{'background-color': bgColor, 'font-size': bgSize + 'px'}">
+  <h1>{{article.title}}</h1>
+  <p><strong>Author: </strong>{{article.author}}</p>
+  <div class="image-wrapper">
+    <img src={{article.image}} *ngIf="showHide" alt={{article.title}} />
+    <button type="button" (click)="changeShowStatus()">{{showHide ? 'Hide' : 'Show'}} Image</button>
+  </div>
+  <p  [ngStyle]="{'color': txColor}">{{article.description.substr(0, length)}}<a href="javascript:show()" *ngIf="article.description.length > length" (click)="showMore()">...Read More</a></p>
+</div>
+</article>
