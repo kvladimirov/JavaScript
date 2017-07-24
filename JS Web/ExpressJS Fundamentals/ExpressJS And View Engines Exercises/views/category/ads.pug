@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h2= `Обяви в категория ${category.name}`
+  .ads
+    each ad in category.ads
+      .ad-card
+        img.ad-img(src=`${ad.image}` alt=`${ad.description}`)
+        p= ad.title
+        p= ad.description
+        p= 'Цена: $' + ad.price
+
+        a.btn.btn-small.btn-warning(href=`/ad/edit/${ad._id}`)= 'Редактирай'
+        a.btn.btn-small.btn-danger(href=`/ad/delete/${ad._id}`)= 'Изтрий'

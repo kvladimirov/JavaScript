@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h2.head-title Добави Категория
+  form.form.center-form(method='post', enctype='multipart/form-data')
+    .form-group
+      label(for='name') Наименование
+      input#name.input-field(name='name', type='text' required="required")
+    .form-group
+      input.form-btn.btn(type='submit', value='Създай')

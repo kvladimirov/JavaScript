@@ -1,0 +1,19 @@
+{
+  "name": "expressjs-lab",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "engine": "7.1.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "lab",
+    "project"
+  ],
+  "author": "KV",
+  "license": "MIT",
+  "dependencies": {
+    "standard": "10.0.2"
+  }
+}

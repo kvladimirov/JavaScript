@@ -1,0 +1,14 @@
+<h2 class="head-title">Редактирай коментар</h2>
+
+<p>от: {{comment.creator.username}}</p>
+<p>публикация: {{comment.article.title}}</p>
+
+<form class="form center-form" method="POST">
+    <div class="form-group">
+        <label for="title">      </label>    
+        <textarea rows="10" class="input-field" required name="content">{{comment.content}}</textarea>
+    </div>
+    <div class="form-group">
+         <input type="submit" class="btn form-btn" value="Редактирай" />
+    </div>
+</form>

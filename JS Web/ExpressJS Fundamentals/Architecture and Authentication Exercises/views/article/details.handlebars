@@ -1,0 +1,39 @@
+<h2 class="head-title">{{article.title}}</h2>
+<img class="article-img" src="{{article.image}}">
+<p>Автор: {{article.creator.username}} от: {{article.date date "Y-m-d"}}</p>
+<p>{{article.content}}</p>
+
+{{#custIf currentUser._id '===' article.creator._id}}
+    <a href="/article/edit/{{../article._id}}">Редактирай</a>
+{{/custIf}}
+
+{{#if isAdmin}}
+    <a href="/article/edit/{{article._id}}">Редактирай</a>
+    <a href="/article/delete/{{article._id}}">Изтрий</a>
+{{/if}}
+
+<form class="form center-form" method="post" action="/article/comment/{{article._id}}">
+  <div class="form-group">
+    <label for="title">      </label> 
+    <textarea rows="10" name="content" class="input-field" placeholder="Коментирай публикацията..." required></textarea>
+  </div>
+    <input type="submit" class="btn form-btn" value="Публикувай"/>
+
+</form>
+
+<h2 class="head-title">Коментари</h2>
+
+{{#each comments}}
+  <p>{{this.creator.username}}</p>
+  <p>{{this.date}}</p>
+  <p>{{this.content}}</p>
+
+  {{#custIf ../currentUser._id '===' this.creator._id}}
+    <a href="/comment/edit/{{../this._id}}">Редактирай</a>
+  {{/custIf}}
+
+    {{#if ../isAdmin}}
+        <a href="/comment/edit/{{this._id}}">Редактирай</a>
+        <a href="/comment/delete/{{this._id}}">Изтрий</a>
+    {{/if}}
+{{/each}}

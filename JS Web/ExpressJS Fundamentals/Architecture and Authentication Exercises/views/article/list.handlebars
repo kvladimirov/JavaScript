@@ -1,0 +1,30 @@
+<h1 class="head-title">Публикации</h1>
+<form id="search-form" action="/article/list" method="GET">
+  <input type="text" name="search" placeholder="Търси..."/>
+  <input type="submit" value="Търси" />
+</form>
+
+{{#each articles}}
+  <article class="article">
+      <h2 class="head-title">{{this.title}}</h2>
+      <img class="article-img" src="{{this.image}}">
+      <p>Автор:  {{this.creator.username}} от: {{this.date}}</p>
+      <p>{{this.content}}</p>
+      {{#if ../currentUser}}
+        <a href="/article/details/{{this._id}}">Детайли</a>
+      {{/if}}
+  </article>
+
+{{else}}
+  <h2>Все още няма публикации!</h2>  
+{{/each}}
+
+<div class="font-3x">
+  {{#if hasPrevPage}}
+    <a href="/article/list?page={{prevPage}}&search={{search}}">&lt;&lt;</a>
+    &nbsp; &nbsp; &nbsp;
+  {{/if}}
+  {{#if hasNextPage}}
+    <a href="/article/list?page={{nextPage}}&search={{search}}">&gt;&gt;</a>
+  {{/if}}
+</div>

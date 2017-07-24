@@ -1,0 +1,17 @@
+<h2 class="head-title">Изтрий публикацията</h2>
+
+<form class="form center-form" method="POST">
+    <div class="form-group">
+        <label for="title">Заглавие:</label>
+        <input type="text" name="title" class="input-field" value="{{article.title}}" disabled/>
+    </div>
+    <div class="form-group">
+        <label for="content">Съдържание:</label>
+        <textarea name="content" rows="10" class="input-field" disabled>{{article.content}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="image">Снимка</label>
+        <img class="article-img" src="{{article.image}}">
+    </div>
+    <input type="submit" class="btn form-btn" value="Изтрий" />
+</form>

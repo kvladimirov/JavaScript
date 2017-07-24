@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  h1.head-title Добави нова обява
+  form.form.center-form(method="post", enctype="multipart/form-data")
+    .form-group
+      label(for='title') Заглавие
+      input#name.input-field(name='title', type='text')
+    .form-group
+      label(for='description') Текст на обявата
+      textarea#name.input-field(name='description', type='text')
+    .form-group
+      label(for='price') Цена
+      input#price.input-field(name='price', type='number', step="1" min="0")
+    .form-group
+      label(for='image') Снимка
+      input#image.input-field(name='image', type='file', accept='.jpg,.jpeg,.png')
+    .form-group
+      label(for='category') Категория
+      select.input-field(name='category')
+        each category in categories
+          option(value=`${category._id}`)=category.name
+    .form-group
+      input.form-btn.btn(type='submit', value='Публикувай')

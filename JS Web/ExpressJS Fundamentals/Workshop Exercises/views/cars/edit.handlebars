@@ -1,0 +1,33 @@
+<form class="form center-form" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="make">Make</label>
+    <input type="text" name="make" class="input-field" value="{{make}}" />
+  </div>
+   <br />
+  <div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" name="model" class="input-field" value="{{model}}" />
+  </div>
+    <br />
+  <div class="form-group">
+    <label for="year">Year</label>
+    <input type="number" name="year" class="input-field" value="{{year}}" />
+  </div>
+    <br />
+  <div class="form-group">
+    <label for="price-per-day">Price Per Day</label>
+    <input type="number" name="pricePerDay" class="input-field" value="{{pricePerDay}}" />
+  </div>
+    <br />
+  <div class="form-group">
+    <label for="power">Power</label>
+    <input type="number" name="power" class="input-field" value="{{power}}" />
+  </div>
+    <br />
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input id="image" name="image" type="file" class="input-field" accept="image/*" />
+  </div>
+    <br />
+    <input type="submit" class="btn form-btn" value="Edit" />
+</form>

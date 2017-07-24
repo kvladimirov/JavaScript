@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Jaguar I-Pace",
+    "description": "Just a year after the concept's LA show debut, Jag should unveil its real electric crossover in late 2017",
+    "price": "50000",
+    "image": "content\\images\\Jaguar.jpg",
+    "id": 1
+  },
+  {
+    "name": "Ford Fiesta",
+    "description": "How to replace a runaway smash hit like Fiesta? With a gently remodelled remake - plus a host of new trims",
+    "price": "25000",
+    "image": "content\\images\\Ford.jpg",
+    "id": 2
+  },
+  {
+    "name": "BMW 5-series",
+    "description": "A stepchange in the executive class, we suspect, judging by our first drive",
+    "price": "70000",
+    "image": "content\\images\\BMW.jpg",
+    "id": 3
+  }
+]

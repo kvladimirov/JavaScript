@@ -1,0 +1,13 @@
+<form class="form center-form" method="post">
+  <h2 class="head-title">Add admin</h2>
+  <br/><br/><br/>
+  <div class="form-group">
+    <label for="user">Select an user</label>
+    <select name="user" class="input-field">
+    {{#each users}}
+      <option value="{{this._id}}">{{this.username}}</option>
+    {{/each}}
+    </select>
+  </div>
+  <input type="submit" class="btn form-btn" value="Make Admin" ?>
+</form>

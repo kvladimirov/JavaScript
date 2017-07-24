@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h1.head-title Безплатни обяви!
+  .categories
+    each category in categories
+      .ad-card
+        h2= category.name
+        a(href=`/${category.name}/ads`) Виж обявите

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Renting System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/site.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <div id="demo-container">
+    <ul id="simple-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      {{#if isAdmin}}
+        <li><a href="/cars/add">Add Car</a></li>
+      {{/if}}
+      <li><a href="/cars/all">All Cars</a></li>
+      <li></li>
+      {{#if currentUser}}
+        <li />
+        <li />
+        <li />
+        <li />
+        <li />
+        <li><a href="/users/me">{{currentUser.username}}</a></li>
+        <li>
+          <form id="logout-form" action="/users/logout" method="POST"></form>
+          <a href="javascript:document.getElementById('logout-form').submit()">Logout</a>
+        </li>
+      {{else}}
+        <li />
+        <li />
+        <li />
+        <li />
+        <li />
+        <li><a href="/users/register">Register</a></li>
+        <li><a href="/users/login">Login</a></li>
+      {{/if}}
+    </ul>
+  </div>
+  <div id="wrapper">
+    <div id="faux">
+    <div id="leftcolumn">
+    {{#if globalError}}
+      <h3>{{globalError}}</h3>
+    {{/if}}
+    {{{body}}}
+    </div>
+    <div id="rightcolumn"></div>
+    </div>
+  </div>
+</body>
+</html>

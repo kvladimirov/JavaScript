@@ -1,0 +1,9 @@
+
+<form class="form center-form" method="post">
+  <h2 class="head-title">Edit Answer</h2>
+  <p>posted by: {{answer.author.username}} on thread: {{answer.thread.title}}</p>
+  <div class="form-group">
+    <textarea name="content" rows="10" class="input-field" required>{{answer.content}}</textarea>
+    <input type="submit" class="btn form-btn" value="Edit answer" />
+  </div>
+</form>

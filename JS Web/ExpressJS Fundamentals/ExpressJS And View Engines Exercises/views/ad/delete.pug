@@ -1,0 +1,14 @@
+extends ../layout.pug
+
+block content
+  form.form.center-form(method='post', enctype='multipart/form-data')
+    h2 Изтрий обява
+    .form-group
+      label
+      .ad-card
+        img.ad-img(src=`${ad.image}`)
+    .form-group
+      label(for='description') Текст на обявата
+      textarea#name.input-field(name='description', type='text', value=ad.description disabled )
+    .form-group
+      input.form-btn.btn.btn-danger(type='submit', value='Изтрий')
