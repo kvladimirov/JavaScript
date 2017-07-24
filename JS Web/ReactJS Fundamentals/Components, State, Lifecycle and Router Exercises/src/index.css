@@ -1,0 +1,41 @@
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.book {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin: 1%
+}
+
+.book a {
+  color: grey;
+  text-decoration: none;
+}
+
+.book img {
+  width: 250px;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.book h3 {
+  height: 40px;
+}
+
+.book p {
+  text-align: justify;
+}
+
+.author img {
+  width: 400px;
+  height: 400px;
+}
