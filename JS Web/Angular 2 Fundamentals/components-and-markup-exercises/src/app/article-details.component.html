@@ -12,13 +12,13 @@
   <button (click)="add()">+</button>
   <button (click)="subtract()">-</button>
 </div>
-<div [ngStyle]="{'background-color': bgColor, 'font-size': bgSize + 'px'}">
+<div [ngStyle]="{'font-size': bgSize + 'px'}">
   <h1>{{article.title}}</h1>
   <p><strong>Author: </strong>{{article.author}}</p>
   <div class="image-wrapper">
     <img src={{article.image}} *ngIf="showHide" alt={{article.title}} />
     <button type="button" (click)="changeShowStatus()">{{showHide ? 'Hide' : 'Show'}} Image</button>
   </div>
-  <p  [ngStyle]="{'color': txColor}">{{article.description.substr(0, length)}}<a href="javascript:show()" *ngIf="article.description.length > length" (click)="showMore()">...Read More</a></p>
+  <p  [ngStyle]="{'color': txColor, 'background-color': bgColor}">{{article.description.substr(0, length)}}<a href="javascript:show()" *ngIf="article.description.length > length" (click)="showMore()">...Read More</a></p>
 </div>
 </article>

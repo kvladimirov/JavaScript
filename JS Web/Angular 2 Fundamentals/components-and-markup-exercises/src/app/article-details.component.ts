@@ -7,18 +7,17 @@ import { Article } from './Article'
   templateUrl: './article-details.component.html',
   styleUrls: ['./article-details.component.css']
 })
-export class ArticleDetails {
+export class ArticleDetails implements OnInit {
   @Input() article: Article
   showHide: boolean = true
   length: number
   colours: string[] = ['white', 'red', 'green', 'blue', 'yellow']
   coloursForText: string[] = ['black', 'red', 'green', 'blue', 'yellow']
-  bgColor: string = null
-  txColor: string = null
-  bgSize: number = 18
+  bgColor: string
+  txColor: string
+  bgSize: number
 
   onChange(value) {
-    console.log(value)
     this.bgColor = value
   }
 
@@ -28,6 +27,9 @@ export class ArticleDetails {
 
   ngOnInit(): void {
     this.length = 250
+    this.bgColor = 'white'
+    this.txColor = 'black'
+    this.bgSize = 18
   }
 
   changeShowStatus(){
