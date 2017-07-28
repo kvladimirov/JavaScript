@@ -1,0 +1,11 @@
+.profile-sidebar{
+    width:40%;
+    border:2px solid white;
+    border-radius: 10px;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 2%;
+}
