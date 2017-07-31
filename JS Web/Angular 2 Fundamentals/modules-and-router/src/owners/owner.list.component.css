@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+.owner {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin: 1%
+}
+
+.owner li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.owner a {
+  color: grey;
+  text-decoration: none;
+}
+
+.owner img {
+  float: center;
+  margin: 0 20px 20px 0;
+}
+
+.owner h3 {
+  text-align: center;
+  height: 40px;
+}
+
+.owner p {
+  text-align: left;
+}
