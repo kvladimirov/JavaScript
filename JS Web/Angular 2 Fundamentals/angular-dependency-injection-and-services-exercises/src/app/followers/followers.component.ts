@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FollowersData } from './followers.data';
-import { User } from '../users/User';
+import { User } from '../models/User';
 
 
 @Component({

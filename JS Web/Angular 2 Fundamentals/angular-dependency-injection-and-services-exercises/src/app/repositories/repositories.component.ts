@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { RepositoriesData } from './repositories.data'
-import { Repository } from './Repository'
-import { User } from '../users/User'
+import { Repository } from '../models/Repository'
+import { User } from '../models/User'
 
 
 @Component({

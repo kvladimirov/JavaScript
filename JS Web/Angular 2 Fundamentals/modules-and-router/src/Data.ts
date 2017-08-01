@@ -43,7 +43,7 @@ The entire A-Class range was updated in September 2015 and there was a hike of 2
 
 To find out what sets it apart, read on for our full Mercedes-Benz A 45 AMG review.`,
     owner: 1,
-    price: 43.770,
+    price: 43770,
     comments: [2, 3],
     date: Date.now() + 12
   },
@@ -106,7 +106,7 @@ Ford’s Focus hatchback comes with a raft of technology to improve driver safet
 
 There are nine trim levels available from the entry-level Style that comes with air-con but no alloy wheels through to the performance RS flagship, with the luxurious Titanium models providing comfort for those seeking a more premium aura.`,
     owner: 2,
-    price: 32.265,
+    price: 32265,
     comments: [4, 5],
     date: Date.now() + 11
   },
@@ -167,7 +167,7 @@ Fuel economy and CO2 emissions are attractive across the range as a whole, with 
 
 The new Qashqai performs well on a road test. It’s very easy to drive with safe, assured handling and admirable ride comfort, which remains pliant even when specified with large alloy wheels (rims of between 16 and 19 inches are available). Numerous Qashqai accessories are available to tailor your car.`,
     owner: 3,
-    price: 30.035,
+    price: 30035,
     comments: [6, 7],
     date: Date.now() + 3
   },
@@ -210,7 +210,7 @@ The third-generation Leon offers more practicality with a 39-litre larger boot, 
 
 The SEAT Leon is also cheaper than many of its rivals, boasts plenty of standard equipment and comes with a range of fuel efficient, low CO2-emitting engines. Finance rates for the Leon also compare favourably against rivals, with low monthly payments on SEAT’s PCP offer.`,
     owner: 4,
-    price: 31.805,
+    price: 31805,
     comments: [8, 9],
     date: Date.now() + 4
   },
@@ -261,7 +261,7 @@ The original triangular headlamps gave way to more horizontal units closer to th
 
 Interior tweaks were more restrained with detail changes to the dashboard and a range of new seat fabrics.`,
     owner: 5,
-    price: 34.980,
+    price: 34980,
     comments: [],
     date: Date.now() + 5
   },
@@ -314,7 +314,7 @@ Fiesta STs are easy to spot compared with less-powerful models in the range than
 
 Ford raised the stakes further in 2016 with the introduction of the Fiesta ST200 – as the number suggests, this range-topper packed 200hp, enough to reach 142mph.`,
     owner: 6,
-    price: 23.015,
+    price: 23015,
     comments: [],
     date: Date.now() + 6
   },
@@ -381,7 +381,7 @@ Discover Pro even features a rudimentary gesture control system that allows you 
 
 Most of the engines carry over as before. However, VW has added a lower-powered 1.0-litre TSI turbo petrol with 85hp, and an impressive all-new 1.5-litre TSI Evo turbo petrol available with 130hp or 150hp that will arrive later in 2017.`,
     owner: 7,
-    price: 34.650,
+    price: 34650,
     comments: [],
     date: Date.now() + 7
   },
@@ -434,7 +434,7 @@ Where the 3 Series is starting to show its age – this sixth iteration was laun
 
 Step into a 3 Series having spent time in an Audi A4 and you’d be forgiven for assuming there was a £10,000 price differential.`,
     owner: 8,
-    price: 64.225,
+    price: 64225,
     comments: [],
     date: Date.now() + 8
   },
@@ -483,7 +483,7 @@ As befitting modern smartphone technology, the Astra is also available with both
 
 Particularly impressive at night are the IntelliLux LED matrix headlight with directional function when cornering and glare-free automatic main beam.`,
     owner: 9,
-    price: 25.240,
+    price: 25240,
     comments: [],
     date: Date.now() + 9
   },
@@ -514,7 +514,7 @@ Seven-year warranty
 
 As with all Kias, the Rio benefits from a seven-year or 100,000-mile (whichever comes first) warranty, which is transferable between owners. This is the only area where the Rio really stands out from its rivals, yet should ensure excellent all-round reliability.`,
     owner: 10,
-    price: 17.585,
+    price: 17585,
     comments: [],
     date: Date.now() + 10
   },
@@ -553,7 +553,7 @@ Equipment levels were also upgraded slightly, with Bluetooth and USB connectivit
 
 For the full Peugeot 3008 review click through the sections below and at the top of the page to read on.`,
     owner: 11,
-    price: 29.950,
+    price: 29950,
     comments: [1],
     date: Date.now() + 1
   },
@@ -586,7 +586,7 @@ Toyota’s impressive reliability record comes as standard too, which will attra
 
 So this is a safe, practical, comfortable and reliable estate car that is definitely worthy of making your shortlist. Read on for the full Toyota Avensis Touring Sports review to find out more.`,
     owner: 12,
-    price: 29.300,
+    price: 29300,
     comments: [],
     date: Date.now() + 2
   }

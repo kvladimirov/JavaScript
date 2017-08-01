@@ -26,7 +26,8 @@
   <li class="car">
     <h3><span>{{car.make}}</span> {{car.model}}</h3>
     <img src={{car.image}} alt={{car.make}} />
-    <p><a href="/cars/{{car.id}}">Details</a> <a href="/owners/{{car.owner}}">View owner</a></p>
+    <a href="/cars/{{car.id}}">Details</a>
+    <a href="/owners/{{car.owner}}">View owner</a>
   </li>
 </div>
 <ul *ngIf="pager.pages && pager.pages.length" class="pagination">

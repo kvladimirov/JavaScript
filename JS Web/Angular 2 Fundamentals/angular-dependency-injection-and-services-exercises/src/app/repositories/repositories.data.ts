@@ -1,5 +1,5 @@
-import { Repository } from './Repository'
-import { User } from '../users/User'
+import { Repository } from '../models/Repository'
+import { User } from '../models/User'
 import { Injectable } from '@angular/core'
 import { Http } from '@angular/http'
 import 'rxjs/add/operator/toPromise'

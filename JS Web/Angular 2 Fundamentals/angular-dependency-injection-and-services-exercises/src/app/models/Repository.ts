@@ -1,4 +1,4 @@
-import { User} from '../users/User'
+import { User} from '../models/User'
 
 export class Repository {
     id: number;

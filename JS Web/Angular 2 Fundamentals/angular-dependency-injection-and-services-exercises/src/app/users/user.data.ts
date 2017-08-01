@@ -1,4 +1,4 @@
-import { User } from './User';
+import { User } from '../models/User';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';

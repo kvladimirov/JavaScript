@@ -11,7 +11,7 @@ li {
 
 .car {
   display: inline-block;
-  width: 50%;
+  width: 40%;
   vertical-align: top;
   margin: 1%
 }
@@ -34,10 +34,6 @@ li {
 .car h3 {
   text-align: center;
   height: 40px;
-}
-
-.car p {
-  text-align: left;
 }
 
 .owner img {
