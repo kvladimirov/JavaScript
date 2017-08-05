@@ -1,109 +1,197 @@
 let books = [
   { id: 1,
-    image: 'http://speakingjs.com/speakingjs_cover.jpg',
-    title: 'Speaking JavaScript: An In-Depth Guide for Programmers',
-    description: `This book has been written for programmers, by a programmer. 
-    In order to understand it, you should already know object-oriented programming, 
-    for example, via a mainstream programming language such as Java, PHP, C++, Python, 
-    Ruby, Objective-C, Swift, C#, or Perl. Thus, the book’s target audience is programmers 
-    who want to learn JavaScript quickly and properly, and JavaScript programmers who want 
-    to deepen their skills and/or look up specific topics`,
+    image: 'http://www.booksbg.org/image/cache/data/180252_b-240x280.jpg',
+    title: 'Бурята',
+    description: `В средата на Индийския океан, докато изследователски катамаран на НАПМД взима проби от водата, член на екипажа забелязва проблясък от нефтено петно.
+
+Приближавайки се, за да видят отблизо какво става, учените разбират, че това не е нефт. Но за съжаление осъзнават истината, когато вече е прекалено късно. За минути целия екипаж намира смъртта си по ужасяващ начин, а кораба започва да се носи неуправляемо из океанските ширини.
+
+Няколко дни по-късно Кърт Остин и Джо Дзавала пристигат в района, за да разследват изчезването на техните колеги и приятели.
+
+Това, на което са се натъкнали мъртвите изследователи, е върха на айсберга от заговор, в резултат на който ще загинат милиони, за да се облагодетелстват малцина. Заговор, замислен от самозабравили се хора, които искат да си играят на Бог. Заговор, който вече е в действие.
+
+Единственото, което не е предвидено от безскрупулните кукловоди на това жестоко представление е намесата на Кърт Остин и неговия екип за специални операции на НАМПД.`,
     author: 1,
-    price: 10.55,
-    comments: [1, 2, 3],
-    date: '2015-03-25T12:00:00Z'
+    price: 18.00,
+    comments: [1],
+    date: new Date('2017-06-01')
   },
   { id: 2,
-    image: 'http://exploringjs.com/es6/images/cover.jpg',
-    title: 'Exploring ES6',
-    description: `Is the most comprehensive book on ECMAScript 6 (ECMAScript 2015).
-    Is a book for people who already know JavaScript.`,
+    image: 'http://www.booksbg.org/image/cache/data/6805690_b-240x280.jpg',
+    title: 'Златото на Спарта',
+    description: `Древно съкровище, заграбено от Ксеркс Велики… Открито от Наполеон Бонапарт… Изгубено до днес…
+
+Сам и Реми Фарго, търсачи на съкровища и приключения, са на поредната си експедиция. Затънали до кръста в кал в блатото Покомоук в Мериленд, те търсят изгубено злато. Вместо това намират немска миниподводница от Втората световна война.
+
+В подводницата има мъртво тяло и загадъчна, изключително рядка бутилка вино, която се оказва една от дванайсетте бутилки от изгубената изба на Наполеон. Както и ключ към легендарно древно съкровище.
+
+Съкровище, заради което Хедеон Бондарук — милионер от наполовина руски, наполовина персийски произход, е готов на всичко, защото е убеден, че е потомък на великия Ксеркс. Съкровището е негово и той ще отстрани всеки, който се опита да застане на пътя му…`,
     author: 1,
-    price: 15.45,
-    comments: [4, 5],
-    date: '2015-03-25T13:00:00Z'
+    price: 21.99,
+    comments: [2, 3],
+    date: new Date('2017-06-02')
   },
   { id: 3,
-    image: 'http://exploringjs.com/es2016-es2017/images/cover.jpg',
-    title: 'Exploring ES2016 and ES2017',
-    description: `Covers the latest versions of JavaScript as they are created.
-    Is a book for people who already know JavaScript..`,
+    image: 'http://www.booksbg.org/image/cache/data/6426.max-240x280.jpg',
+    title: 'Изгубената империя',
+    description: `Докато са във ваканция и се гмуркат край бреговете на Танзания, Сам и Реми Фарго случайно попадат на корабната камбана на безследно изчезнал кораб от времето на Гражданската война в САЩ.
+
+Откритието, което те приемат като странно забавно, съвсем скоро се превръща в състезание за оцеляване. Защото тази камбана се оказва ключът към древна тайна, която един диктатор иска да остане скрита.
+
+В надпревара по целия свят семейство Фарго ще трябва да оцелеят и да са винаги крачка пред преследвачите си. Защото залогът е не само тайната, която може да промени историята на голяма част от света, но също и техния живот. Залогът се вдига до „всичко или нищо” в момента, в който безмилостният екип убийци залавя Реми Фарго. Сам има на разположение само 24 часа, за да намери отговора на загадка, пазена грижливо от хилядолетия.
+
+И по-важното – той има само 24 часа, за да спаси жената, която обича.`,
     author: 1,
-    price: 9.30,
-    comments: [6, 7],
-    date: '2015-03-25T20:00:00Z'
+    price: 17.99,
+    comments: [4, 5],
+    date: new Date('2017-06-03')
   },
   { id: 4,
-    image: 'https://images-na.ssl-images-amazon.com/images/I/51QXP7FDJ2L._SX376_BO1,204,203,200_.jpg',
-    title: 'JavaScript for Kids: A Playful Introduction to Programming',
-    description: `True to the title, this book is a whimsical exploration of very basic programming
-     concepts, but don’t let that fool you. Books for kids aren’t just for kids. If you have never
-      touched code before, this is a good place to start, even if you’re all grown up. 
-      Diving in the deep end before you learn how to swim can be a frustrating experience. 
-      It’s better to start your practice with some easy wins.`,
+    image: 'https://cdn.ozone.bg/media/catalog/product/cache/1/image/295x394/9df78eab33525d08d6e5fb8d27136e95/m/a/malko-sled-zaleza.jpg',
+    title: 'Малко след залеза',
+    description: `Bepoятнo ĸaтo плaмeнни пoчитaтeли нa Cтивън Kинг вeчe cтe пpoчeли вcичĸи (или пoчти вcичĸи) нeгoви ĸниги и знaeтe, чe cи cтpyвa тpyдa. Cлeд ĸaтo пpeлиcтитe пocлeднaтa cтpaницa нa „Maлĸo cлeд зaлeзa”, щe знaeтe oщe нeщo – чe Kинг cи ocтaвa и нeĸopoнoвaният ĸpaл нa paзĸaзa. C вcяĸa cлeдвaщa дyмa, c вceĸи cлeдвaщ peд зaпoчвaмe дa ce чyвcтвaмe ĸaтo мyшици, впpимчeни в пaяжинaтa нa пoвecтвoвaниeтo, ĸoeтo oбaчe ни дocтaвя бeзмepнo yдoвoлcтвиe. Зa Kинг гpaницaтa мeждy живoтa и cмъpттa мнoгo чecтo e мъглявa, a oнoвa, ĸoeтo пoддъpжa цeлocттa нa ĸpexĸaтa дeйcтвитeлнocт, вceĸи мoмeнт мoжe дa pyxнe. Oттyĸ и yмeниeтo мy дa ни дъpжи в нaпpeжeниe и дa нe ни ocтaвя дa зacпим, дoĸaтo нe пpoчeтeм и пocлeднaтa дyмa.
+
+Caмa пo ceбe cи вcяĸa иcтopия e шeдьoвъp, пopaзявaщ нe caмo cъc cюжeтa, нo и c yceщaнeтo зa cъпpичacтнocт ĸъм гepoитe – oбиĸнoвeни xopa, пoпaднaли в нeoбиĸнoвeни cитyaции. 
+
+Mигoвeтe cлeд зaлeзa или cлeд нacтъпвaнeтo нa здpaчa (aĸo пoвeчe ви xapecвa) ca мaгичecĸи – тoгaвa вcичĸo дoбивa дpyги измepeния, тoгaвa въoбpaжeниeтo пpoтягa пpъcти ĸъм ceнĸитe, paзмивaщи ce в мpaĸa, и pиcyвa нeвъoбpaзими cцeни. Toгaвa пpиcтъпвaтe в cвeтa нa Cтивън Kинг – вълшeбeн, нeпoвтopим и пpивличaщ ĸaтo мaгнит.`,
     author: 2,
-    price: 22.30,
-    comments: [8, 9],
-    date: '2015-03-25T19:00:00Z'
+    price: 16.99,
+    comments: [6, 7],
+    date: new Date('2017-06-04')
   },
   { id: 5,
-    image: 'https://images-na.ssl-images-amazon.com/images/I/51zFTdNilAL._SX377_BO1,204,203,200_.jpg',
-    title: 'Eloquent JavaScript: A Modern Introduction to Programming',
-    description: `This book is a work of art. It walks you through the essential concepts with a clear 
-    roadmap using clear language. It’s masterfully composed and edited, and unlike most programming books, 
-    it’s full of exercises for you to practice. If I were teaching the basics of programming in high school 
-    or college, I would use this as a text book.`,
+    image: 'https://cdn.ozone.bg/media/catalog/product/cache/1/image/295x394/9df78eab33525d08d6e5fb8d27136e95/z/a/zal-mrak-ugasnali-zvezdi.jpg',
+    title: 'Зъл мрак, угаснали звезди',
+    description: `Πътyвaнe в лaбиpинтa нa чoвeшĸaтa дyшa, нaдниĸвaнe в cвeтa oтвъд oглeдaлoтo, ĸъдeтo живee нeзнaйнoтo ни aз. Oнoвa, ĸoeтo ce пoявявa в нaй-нeoчaĸвaни мoмeнти, пoдтиĸвa ни ĸъм нaй-нeoчaĸвaни пocтъпĸи. Зa ĸoитo плaщaмe cĸъпo.
+
+Koгaтo Kpaлят нa yжaca oзaглaви твopбaтa cи „Зъл мpaĸ, yгacнaли звeзди”, вeчe пpeдчyвcтвaтe нeзaбpaвимo пpeживявaнe... aĸo пpeдcтaвaтa ви зa нeзaбpaвимo пpeживявaнe e дa ce cвиeтe нa ĸълбo и дa ce питaтe: „Зaщo ми тpябвaшe дa чeтa тoвa пpeз нoщтa?” Πoчитaтeлитe нa Cтивън Kинг (и oнeзи, ĸoитo oтĸpaй вpeмe ce ĸaнят дa ce „пpoбвaт” c нeгoвa ĸнигa) щe изгълтaт нa eдин дъx cбopниĸa c чeтиpитe нoвeли, в ĸoйтo бpaĸoвe ce cpивaт пoд тeжecттa нa ĸaтpaнeнoчepни тaйни, aлчнocттa и yгpизeниятa тpoвят и тepзaят и eдинcтвeнaтa yтexa e, чe винaги мoжe дa cтaнe пo-злe.`,
+    author: 2,
+    price: 22.00,
+    comments: [8, 9],
+    date: new Date('2017-06-05')
+  },
+  { id: 6,
+    image: 'https://cdn.ozone.bg/media/catalog/product/cache/1/image/295x394/9df78eab33525d08d6e5fb8d27136e95/k/o/kolekcija-igra-na-tronove_1_.jpg',
+    title: 'Колекция "Игра на тронове"',
+    description: `Koлeĸция „Игpa нa Tpoнoвe” вĸлючвa вcичĸи зaглaвия oт cepиятa „Πeceн зa oгън и лeд”: 
+Игpa нa тpoнoвe, Cблъcъĸ нa ĸpaлe, Bиxъp oт мeчoвe, Πиp зa вpaни, Taнц c дpaĸoни.
+
+C шeмeтния cи бяг oт cĸoвaнa в жecтoĸ cтyд cтpaнa ĸъм зeми нa вeчнo лятo и oxoлнo бeзгpижиe, фeнтъзи eпиcът нa Джopдж P. P. Mapтин e cĸaзaниe зa влaдeтeли и влaдeтeлĸи, вoини и чapoдeи, нaeмни yбийци и нeзaĸoнopoдeни пpeтeндeнти зa влacт, пoявили ce във вpeмeнa нa мpaчни пoличби.
+
+Cpeд зaгoвopи и ĸoвapcтвa, тpaгeдии и вepoлoмcтвo, пoбeди и нacилия, cъюзници и вpaгoвe, cъдбaтa нa Becтepoc виcи нa ĸocъм и вcяĸa oт cтpaнитe ce бopи зa пoбeдa в нaй-cмъpтoнocния ĸoнфлиĸт: Игpaтa нa тpoнoвe.
+
+Caгaтa e oтличeнa c нaгpaдaтa нa пyблиĸaтa зa нaй-дoбpo фeнтъзи нa гoдинaтa. Poмaнитe oт cepиятa ca нocитeли нa 4 нaгpaди  „Лoĸyc”, имaт нoминaции зa „Xюгo” и „Heбюлa”. 
+
+Πpeз 2011 г. НВО пycĸaт cepиaл, взeмaйĸи зa зaглaвиe имeтo нa пъpвaтa ĸнигa „Игpa нa тpoнoвe”. Πpoдyĸциятa ce пpeвpъщa в ĸpитичeн и ĸoмepcиaлeн ycпex. Cпopeд Тhе Gаrdіаn дo 2014 г., ĸoгaтo e излъчeн 4-ят ceзoн, cepиaлът e cтaнaл „нaй-гoлямaтa дpaмa” и „нaй-oбcъждaнoтo шoy”.`,
     author: 3,
-    price: 35.30,
+    price: 79.00,
     comments: [],
-    date: '2015-03-25T17:00:00Z'
+    date: new Date('2017-06-06')
+  },
+  { id: 7,
+    image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/g/o/godinata-na-varkolaka2.jpg',
+    title: 'Годината на върколака',
+    description: 'Зимата отново е сковала Таркърс Милс, но тази година заедно с нея е дошъл и Звярът. Таркърс Милс. Едно забравено от бога градче, досущ като Сейлъмс Лот, Касъл Рок и Дери. Всеки път, когато настане пълнолуние, нечовешки вой оглася нощта и всички знаят, че някой ще умре. Неумолима, Смъртта броди по пустеещите улици, а страхът се загнездва все по-дълбоко в сърцата и умовете на местните жители. Властите са безсилни пред чудовищните убийства и само едно безпомощно дете подозира кошмарната истина.',
+    author: 2,
+    price: 12.00,
+    comments: [],
+    data: new Date('2017-06-07')
+  },
+  { id: 8,
+    image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/9/7/9786191571017.jpg',
+    title: 'Кери',
+    description: `"Кери" е първата публикувана книга на Стивън Кинг и първата стъпка от най-забележителната литературна кариера на света. Впоследствие историята на невзрачното момиче с необикновени способности вдъхновява два филма (включително и шедьовъра на Брайън де Палма със Сиси Спейсик и Джон Траволта), няколко телевизионни адаптации и дори мюзикъл за Бродуей.
+ 
+Тийнейджърите мразят различните. Ненавиждат аутсайдерите. А Кери Уайт е точно това. От първия си ден в училище тя търпи подигравките и издевателствата на съучениците си, които стават все по-изобретателни в своята жестокост. Кошмарите обаче не приключват с училищния звънец, защото вкъщи я чака друго чудовище – собствената й майка. Тираничната Маргарет Уайт е обладана от свиреп религиозен фанатизъм и дарява дъщеря си не с майчина любов, а с нечовешка жестокост. И тъкмо когато облаците са на път да се разпръснат и в сърцето на Кери започва да блещука пламъчето на надеждата, кошмарът ще придобие неописуеми измерения и светът ще се превърне в Преизподня. Защото никой не подозира, че Кери таи в себе си ужасяваща тайна…`,
+    author: 2,
+    price: 16.00,
+    comments: [],
+    data: new Date('2017-06-08')
+  },
+  { id: 9,
+    image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/9/7/9789545840937_1.jpg',
+    title: 'Очите на дракона',
+    description: `ИМАЛО ЕДНО ВРЕМЕ дракони и принцеси... зли магьосници и мрачни подземия, и една ужасна тайна. С този свой шедьовър, изпълнен с вълшебства и дръзки приключения, Стивън Кинг ни превежда през едно вдъхващо страх и покоряващо царство на злото...`,
+    author: 2,
+    price: 12.99,
+    comments: [],
+    data: new Date('2017-06-09')
+  },
+  { id: 10,
+    image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/b/e/bezsanie1.jpg',
+    title: 'Безсъние',
+    description: `В Дери се случват поредица от странни смъртни случаи и трагедии, които подсказват, че силите на злото са овладели градчето.
+
+На фона на зловеща битка на живот и смърт между защитниците и противниците на абортите в Дери, Стивън Кинг рисува странен въображаем свят, в който властват Случайността и Умисъла и в който свръхестествени същества отвеждат хората от нашия свят към отвъдното.`,
+    author: 2,
+    price: 16.99,
+    comments: [],
+    data: new Date('2017-06-10')
+  },
+  { id: 11,
+    image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/9/7/9789545851599.jpg',
+    title: 'Зеленият път',
+    description: `В клетките на затвора, издълбани в Студената планина по протежение на дълга редица, известна като "Зеленият път", изроди убийци, като психопата "Били хлапето" Уортън и налудничавия Едуард Делакроа, оковани очакват смъртта си. Охраняват ги надзиратели като добрия Пол Еджкоум и садисти като Пърси Уетмор. Но никой добър или лош, виновен или невинен не е виждал изрод като новия затворник Джон Кофи, осъден на смърт за изнасилване и убийство на две млади момичета. Дали Кофи е сатана в човешки образ? Или е съвсем различно същество?...`,
+    author: 2,
+    price: 15.99,
+    comments: [],
+    data: new Date('2017-06-11')
+  },
+  { id: 12,
+    image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/p/a/patna-mreja2.jpg',
+    title: 'Пътна мрежа',
+    description: `Един мъж е решен да спъне колелото на прогреса в борба с катастрофални последици. Когато проект за построяване на магистрала го оставя без работа и заплашва да унищожи дома му, той има повече от достатъчно време, за да замисли отмъщението си. Път за отстъпление няма. Завежда семейството си на сигурно място и застава срещу нещо, което според него е истинско престъпление. Нарастващо напрежение, което достига шокиращата си кулминация. “Пътна мрежа” е драматичен разказ, който няма да забравите скоро.`,
+    author: 2,
+    price: 11.00,
+    comments: [],
+    data: new Date('2017-06-12')
   }
 ]
 
 let comments = [
   {
     id: 1,
-    message: 'Very good book',
+    message: 'Много добра книга, увлекателна и грабваща.',
     book: 1
   },
   {
     id: 2,
-    message: 'Not bad, very advanced',
+    message: 'Не е лоша книгата, интересна история.',
     book: 1
   },
   {
     id: 3,
-    message: 'I liked it',
+    message: 'Хареса ми. Добра книга.',
     book: 1
   },
   {
     id: 4,
-    message: 'Superb book',
+    message: 'Не дочетена. Не по моя вкус.',
     book: 2
   },
   {
     id: 5,
-    message: 'I didn\'t like it...',
+    message: 'Не ми хареса книгата.',
     book: 2
   },
   {
     id: 6,
-    message: 'Wonderful',
+    message: 'Невероятна книга.',
     book: 3
   },
   {
     id: 7,
-    message: 'Great book',
+    message: 'История шедьовър.',
     book: 3
   },
   {
     id: 8,
-    message: 'Dovolen sym',
+    message: 'Поразяващ сюжет.',
     book: 4
   },
   {
     id: 9,
-    message: 'Mnogo neshta sa pokazani',
+    message: 'Без коментар.',
     book: 4
   }
 ]
@@ -111,21 +199,21 @@ let comments = [
 let authors = [
   {
     id: 1,
-    name: 'Dr. Axel Rauschmayer',
-    image: 'http://speakingjs.com/axel_head.jpg',
+    name: 'Клайв Къслър',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYIZdDe0DdqYFqr0xeq4Bw3ad1LtCCHwO2ABQFCxvWjVBkvlh1',
     books: [1, 2, 3]
   },
   {
     id: 2,
-    name: 'Nick Morgan',
-    image: 'http://www.azquotes.com/public/pictures/authors/df/8e/df8e2429b0fea3323ca39ab58bd785fd/556ec843ec87b_nick_morgan.jpeg',
-    books: [4]
+    name: 'Стивън Кинг',
+    image: 'https://www.ozone.bg/media/wysiwyg/Authors/stephen_king.jpg',
+    books: [4, 5, 7, 8, 9, 10, 11, 12]
   },
   {
     id: 3,
-    name: 'Marijn Haverbeke',
-    image: 'https://pbs.twimg.com/profile_images/2033010624/pic_400x400.jpg',
-    books: [5]
+    name: 'Джордж Р. Р. Мартин',
+    image: 'https://www.ozone.bg/media/wysiwyg/Authors/george-rr-martin.jpg',
+    books: [6]
   }
 ]
 

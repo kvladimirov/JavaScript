@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import BooksStore from '../stores/BooksStore'
 import AuthorsStore from '../stores/AuthorsStore'
 
-export default class HomePage extends React.Component {
+export default class Home extends React.Component {
   constructor (props) {
     super(props)
 
@@ -17,8 +17,9 @@ export default class HomePage extends React.Component {
   }
 
   getBooks () {
-    let books = BooksStore.getAll()
-    books = books.sort((a, b) => new Date(a.date) - new Date(b.date))
+    let authors = AuthorsStore.getAll()
+    let books = BooksStore.getAll().filter(b => authors.some(a => a.books.includes(b.id)))
+    books = books.sort((a, b) => b.date - a.date)
     for (let book of books) {
       book.authorName = AuthorsStore.getAuthorByBook(book.id).name
     }
@@ -32,7 +33,7 @@ export default class HomePage extends React.Component {
   }
 
   render () {
-    let bookNodes = this.state.books.map(b => {
+    let bookNodes = this.state.books.slice(0, 6).map(b => {
       return (
         <div className='book' key={b.id}>
           <Link to={`/books/${b.id}`}>

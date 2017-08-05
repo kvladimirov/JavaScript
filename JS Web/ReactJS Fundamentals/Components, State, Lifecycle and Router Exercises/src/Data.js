@@ -14,7 +14,7 @@ let allBooks = [
     author: 1,
     price: 18.00,
     comments: [1],
-    date: '2015-03-25T12:00:00Z'
+    date: new Date('2017-06-01')
   },
   { id: 2,
     image: 'http://www.booksbg.org/image/cache/data/6805690_b-240x280.jpg',
@@ -29,7 +29,7 @@ let allBooks = [
     author: 1,
     price: 21.99,
     comments: [2, 3],
-    date: '2015-03-25T13:00:00Z'
+    date: new Date('2017-06-02')
   },
   { id: 3,
     image: 'http://www.booksbg.org/image/cache/data/6426.max-240x280.jpg',
@@ -44,7 +44,7 @@ let allBooks = [
     author: 1,
     price: 17.99,
     comments: [4, 5],
-    date: '2015-03-25T20:00:00Z'
+    date: new Date('2017-06-03')
   },
   { id: 4,
     image: 'https://cdn.ozone.bg/media/catalog/product/cache/1/image/295x394/9df78eab33525d08d6e5fb8d27136e95/m/a/malko-sled-zaleza.jpg',
@@ -57,7 +57,7 @@ Mигoвeтe cлeд зaлeзa или cлeд нacтъпвaнeтo нa здpaчa (a
     author: 2,
     price: 16.99,
     comments: [6, 7],
-    date: '2015-03-25T19:00:00Z'
+    date: new Date('2017-06-04')
   },
   { id: 5,
     image: 'https://cdn.ozone.bg/media/catalog/product/cache/1/image/295x394/9df78eab33525d08d6e5fb8d27136e95/z/a/zal-mrak-ugasnali-zvezdi.jpg',
@@ -68,7 +68,7 @@ Koгaтo Kpaлят нa yжaca oзaглaви твopбaтa cи „Зъл мpaĸ, y
     author: 2,
     price: 22.00,
     comments: [8, 9],
-    date: '2015-03-25T17:00:00Z'
+    date: new Date('2017-06-05')
   },
   { id: 6,
     image: 'https://cdn.ozone.bg/media/catalog/product/cache/1/image/295x394/9df78eab33525d08d6e5fb8d27136e95/k/o/kolekcija-igra-na-tronove_1_.jpg',
@@ -86,7 +86,7 @@ Caгaтa e oтличeнa c нaгpaдaтa нa пyблиĸaтa зa нaй-дoбpo �
     author: 3,
     price: 79.00,
     comments: [],
-    date: '2015-03-25T17:00:00Z'
+    date: new Date('2017-06-06')
   },
   { id: 7,
     image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/g/o/godinata-na-varkolaka2.jpg',
@@ -95,7 +95,7 @@ Caгaтa e oтличeнa c нaгpaдaтa нa пyблиĸaтa зa нaй-дoбpo �
     author: 2,
     price: 12.00,
     comments: [],
-    data: '2015-03-25T17:00:00Z'
+    data: new Date('2017-06-07')
   },
   { id: 8,
     image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/9/7/9786191571017.jpg',
@@ -106,7 +106,7 @@ Caгaтa e oтличeнa c нaгpaдaтa нa пyблиĸaтa зa нaй-дoбpo �
     author: 2,
     price: 16.00,
     comments: [],
-    data: '2015-03-25T17:00:00Z'
+    data: new Date('2017-06-08')
   },
   { id: 9,
     image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/9/7/9789545840937_1.jpg',
@@ -115,7 +115,7 @@ Caгaтa e oтличeнa c нaгpaдaтa нa пyблиĸaтa зa нaй-дoбpo �
     author: 2,
     price: 12.99,
     comments: [],
-    data: '2015-03-25T17:00:00Z'
+    data: new Date('2017-06-09')
   },
   { id: 10,
     image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/b/e/bezsanie1.jpg',
@@ -126,7 +126,7 @@ Caгaтa e oтличeнa c нaгpaдaтa нa пyблиĸaтa зa нaй-дoбpo �
     author: 2,
     price: 16.99,
     comments: [],
-    data: '2015-03-25T17:00:00Z'
+    data: new Date('2017-06-10')
   },
   { id: 11,
     image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/9/7/9789545851599.jpg',
@@ -135,7 +135,7 @@ Caгaтa e oтличeнa c нaгpaдaтa нa пyблиĸaтa зa нaй-дoбpo �
     author: 2,
     price: 15.99,
     comments: [],
-    data: '2015-03-25T17:00:00Z'
+    data: new Date('2017-06-11')
   },
   { id: 12,
     image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/p/a/patna-mreja2.jpg',
@@ -144,7 +144,7 @@ Caгaтa e oтличeнa c нaгpaдaтa нa пyблиĸaтa зa нaй-дoбpo �
     author: 2,
     price: 11.00,
     comments: [],
-    data: '2015-03-25T17:00:00Z'
+    data: new Date('2017-06-12')
   }
 ]
 

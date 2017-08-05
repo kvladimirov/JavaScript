@@ -6,17 +6,17 @@ import BookStore from '../../stores/BooksStore'
 import AuthorStore from '../../stores/AuthorsStore'
 import toastr from 'toastr'
 
-class CreateBookPage extends React.Component {
+class CreateBook extends React.Component {
   constructor (props) {
     super(props)
 
     this.state = {
       book: {
-        title: 'Eleven Minutes',
-        price: 22.50,
-        author: '1',
-        image: 'http://t2.gstatic.com/images?q=tbn:ANd9GcRY8UMFykPB2BlkdVhnCoFcK0pyExkXCAtbw7j5qgoQr7FfGqWA',
-        description: 'Eleven Minutes is a 2003 novel by Brazilian novelist Paulo Coelho that recounts the experiences of a young Brazilian prostitute and her journey to self-realisation through sexual experience.'
+        title: 'Бурята на века',
+        price: 15.90,
+        author: '2',
+        image: 'https://www.orangecenter.bg/media/catalog/product/cache/1/image/602f0fa2c1f0d1ba5e241f914e856ff9/9/7/9786191570690.jpg',
+        description: `“Бурята на века” нагледно демонстрира и извежда на преден план една от най-силните страни на Кинг като разказвач – драматургичното му майсторство. Макар и да е писал истории като “Тъмната кула”, в които героите преброждат най-различни светове, талантът му блести най-силно в пресъздаването на човешките взаимоотношения в сравнително затворени общности, където Кралят подлага на безжалостна дисекция междуличностните отношения и добавя уникално социалнопсихологическо измерение към жанра на свръхестествения ужас.`
       },
       authors: [],
       error: ''
@@ -66,4 +66,4 @@ class CreateBookPage extends React.Component {
   }
 }
 
-export default CreateBookPage
+export default CreateBook

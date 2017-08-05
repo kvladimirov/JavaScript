@@ -5,7 +5,7 @@ import AuthorsStore from '../stores/AuthorsStore'
 import CommentsStore from '../stores/CommentsStore'
 import BooksActions from '../actions/BooksActions'
 
-export default class BooksDetailsPage extends React.Component {
+export default class BooksDetails extends React.Component {
   constructor (props) {
     super(props)
 
@@ -60,14 +60,13 @@ export default class BooksDetailsPage extends React.Component {
     })
 
     return (
-      <div className='book-info'>
+      <div className='book'>
         <img src={this.state.book.image} alt='book' />
         <h2>{this.state.book.title}</h2>
         <p>{this.state.book.description}</p>
         <p>Price: ${this.state.book.price}</p>
         <p>Author: <Link to={`/authors/${this.state.author.id}`}>{this.state.author.name}</Link></p>
         <button onClick={this.deleteBook.bind(this)}>Delete</button>
-        <Link to={`/books/edite/${this.state.book.id}`}>Edit</Link>
         <h4>Comments for this book:</h4>
         {comments}
       </div>

@@ -5,7 +5,7 @@ import AuthorActions from '../../actions/AuthorsActions'
 import AuthorStore from '../../stores/AuthorsStore'
 import toastr from 'toastr'
 
-class EditAuthorPage extends React.Component {
+class EditAuthor extends React.Component {
   constructor (props) {
     super(props)
 
@@ -60,4 +60,4 @@ class EditAuthorPage extends React.Component {
   }
 }
 
-export default EditAuthorPage
+export default EditAuthor

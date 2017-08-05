@@ -7,9 +7,13 @@ export default class AllAuthors extends React.Component {
     super(props)
 
     this.state = {
-      orderBy: 'Ascending',
-      authors: []
+      authors: [],
+      currentPage: 1,
+      authorsPerPage: 10
     }
+
+    this.handleClick = this.handleClick.bind(this)
+    this.onSortingChange = this.onSortingChange.bind(this)
 
     AuthorsStore.on('change', () => {
       this.getAuthors()
@@ -29,25 +33,35 @@ export default class AllAuthors extends React.Component {
     this.getAuthors()
   }
 
-  sortAuthors () {
-    let authors = this.state.authors
-    let nextSort
-    if (this.state.orderBy === 'Ascending') {
-      authors = authors.sort((a, b) => b.name.localeCompare(a.name))
-      nextSort = 'Descending'
-    } else {
-      authors = authors.sort((a, b) => a.name.localeCompare(b.name))
-      nextSort = 'Ascending'
-    }
-
+  handleClick (event) {
     this.setState({
-      orderBy: nextSort,
-      authors: authors
+      currentPage: Number(event.target.id)
     })
   }
 
+  onSortingChange (value) {
+    if (value === 'ascending') {
+      this.setState(prevState => ({
+        authors: prevState.authors.sort((a, b) => a.name.localeCompare(b.name))
+      }))
+    }
+
+    if (value === 'descending') {
+      this.setState(prevState => ({
+        authors: prevState.authors.sort((a, b) => b.name.localeCompare(a.name))
+      }))
+    }
+  }
+
   render () {
-    let authors = this.state.authors.map((author, index) => {
+    const { authors, currentPage, authorsPerPage } = this.state
+
+    // Logic for displaying books
+    const indexOfLastAuthor = currentPage * authorsPerPage
+    const indexOfFirstAuthor = indexOfLastAuthor - authorsPerPage
+    const currentAuthors = authors.slice(indexOfFirstAuthor, indexOfLastAuthor)
+
+    let renderAuthors = currentAuthors.map((author, index) => {
       return (
         <Link to={`/authors/${author.id}`} key={index}>
           <div className='author'>
@@ -57,14 +71,36 @@ export default class AllAuthors extends React.Component {
         </Link>
       )
     })
+
+    // Logic for displaying page numbers
+    const pageNumbers = []
+    for (let i = 1; i <= Math.ceil(authors.length / authorsPerPage); i++) {
+      pageNumbers.push(i)
+    }
+
+    const renderPageNumbers = pageNumbers.map(number => {
+      return (
+        <button
+          key={number}
+          id={number}
+          onClick={e => this.handleClick(e)}>
+          {number}
+        </button>
+      )
+    })
+
     return (
       <div className='authors'>
-        <h2>All authors:
-          <button onClick={this.sortAuthors.bind(this)}>
-            {this.state.orderBy === 'Ascending' ? 'Descending' : 'Ascending'}
-          </button>
-        </h2>
-        {authors}
+        <label>Select sorting: </label>
+        <select onChange={e => this.onSortingChange(e.target.value)}>
+          <option value='ascending'>Ascending</option>
+          <option value='descending'>Descending</option>
+        </select>
+        <br /><br />
+        {renderAuthors}
+        <ul id='page-numbers'>
+          {renderPageNumbers}
+        </ul>
       </div>
     )
   }

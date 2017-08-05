@@ -10,9 +10,12 @@ export default class Header extends React.Component {
   render () {
     return (
       <header>
-        <Link to='/'>Book Store</Link>
+        <Link to='/'>Books Blog</Link>
         <nav>
           <ul>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
             <li>
               <Link to='/books/all'>All books</Link>
             </li>

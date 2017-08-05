@@ -19,7 +19,7 @@ export default class AllBooks extends React.Component {
 
   componentDidMount () {
     data.getBooks().then(books => {
-      books = books.sort((a, b) => new Date(a.date) - new Date(b.date))
+      books = books.sort((a, b) => a.date - b.date)
       let authorsPromises = []
       for (let book of books) {
         authorsPromises.push(data.getAuthorByBook(book.id))
@@ -50,7 +50,7 @@ export default class AllBooks extends React.Component {
   onSortingChange (value) {
     if (value === 'date') {
       this.setState(prevState => ({
-        books: prevState.books.sort((a, b) => new Date(a.date) - new Date(b.date))
+        books: prevState.books.sort((a, b) => a.date - b.date)
       }))
     }
 
@@ -114,7 +114,7 @@ export default class AllBooks extends React.Component {
         <select onChange={e => this.onSortingChange(e.target.value)}>
           <option value='date'>byDate</option>
           <option value='author'>byAuthor</option>
-          <option value='title'>biTitle</option>
+          <option value='title'>byTitle</option>
         </select>
         <br /><br />
         {renderBooks}

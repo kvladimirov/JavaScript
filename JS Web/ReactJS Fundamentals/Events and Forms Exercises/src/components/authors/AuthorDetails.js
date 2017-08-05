@@ -1,10 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import BooksStore from '../stores/BooksStore'
-import AuthorsStore from '../stores/AuthorsStore'
-import AuthorsActions from '../actions/AuthorsActions'
+import BooksStore from '../../stores/BooksStore'
+import AuthorsStore from '../../stores/AuthorsStore'
+import AuthorsActions from '../../actions/AuthorsActions'
+import Auth from '../users/Auth'
 
-export default class AuthorDetailsPage extends React.Component {
+export default class AuthorDetails extends React.Component {
   constructor (props) {
     super(props)
 
@@ -58,6 +59,8 @@ export default class AuthorDetailsPage extends React.Component {
           <img src={this.state.image} alt='author' />
           <h2>{this.state.name}</h2>
         </div>
+        {Auth.isUserAuthenticated() ? (<button>
+          <Link to={`/authors/edit/${this.state.id}`}>Edit</Link></button>) : null}
         <button onClick={this.deleteAuthor.bind(this)}>Delete</button>
         <h3>Books by this author:</h3>
         {booksElements}

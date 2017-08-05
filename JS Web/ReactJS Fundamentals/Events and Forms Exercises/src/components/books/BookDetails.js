@@ -8,7 +8,7 @@ import CommentActions from '../../actions/CommentsActions'
 import Auth from '../users/Auth'
 import toastr from 'toastr'
 
-export default class BooksDetailsPage extends React.Component {
+export default class BooksDetails extends React.Component {
   constructor (props) {
     super(props)
 
@@ -97,17 +97,16 @@ export default class BooksDetailsPage extends React.Component {
     })
 
     return (
-      <div className='book-info'>
+      <div className='book'>
         <img src={this.state.book.image} alt='book' />
         <h2>{this.state.book.title}</h2>
         <p>{this.state.book.description}</p>
         <p>Price: ${this.state.book.price}</p>
         <p>Author: <Link to={`/authors/${this.state.author.id}`}>{this.state.author.name}</Link></p>
         <button onClick={this.deleteBook.bind(this)}>Delete</button>
-        {Auth.isUserAuthenticated() ?
-          <button><Link to={`/books/edit/${this.state.book.id}`}>Edit</Link></button> : null}
-        {Auth.isUserAuthenticated() ?
-          <form>
+        {Auth.isUserAuthenticated() ? <button><Link to={`/books/edit/${this.state.book.id}`}>Edit</Link></button> : null}
+        {Auth.isUserAuthenticated()
+          ? <form>
             <h4>Add comment</h4>
             <textarea name='message'
               rows='3' cols='80'

@@ -28,13 +28,15 @@ class CommentsStore extends EventEmitter {
   }
 
   add (message, bookId) {
-    let id = data.comments.length
+    let id = data.comments.length + 1
+    id = Number(id)
     data.comments.push({
       id: id,
       message: message,
       book: Number(bookId)
     })
     data.books.find(b => b.id === Number(bookId)).comments.push(id)
+    console.log(data.books)
 
     this.emit('comment_added')
   }

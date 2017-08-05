@@ -23,21 +23,6 @@ class BooksStore extends EventEmitter {
     return this.books.filter(b => b.author === authorId)
   }
 
-  createBook (book) {
-    // let id = this.books.length + 1
-    // book[id] = id
-    this.books.push(book)
-    this.emit('change')
-  }
-
-  editBook (id, book) {
-    id = Number(id)
-    this.deleteBook(id)
-    this.books.push(book)
-
-    this.emit('change')
-  }
-
   deleteBook (id) {
     id = Number(id)
     let index = this.books.findIndex(i => i.id === id)
@@ -47,20 +32,12 @@ class BooksStore extends EventEmitter {
   }
 
   handleAction (action) {
-    console.log(action)
     switch (action.type) {
-      case 'CREATE_BOOK': {
-        this.createBook(action.book)
-        break
-      }
-      case 'EDIT_BOOK': {
-        this.editBook(action.id, action.book)
-        break
-      }
       case 'DELETE_BOOK': {
         this.deleteBook(action.id)
         break
       }
+
       default: break
     }
   }

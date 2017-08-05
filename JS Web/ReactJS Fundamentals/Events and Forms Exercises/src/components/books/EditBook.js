@@ -6,7 +6,7 @@ import BookStore from '../../stores/BooksStore'
 import AuthorStore from '../../stores/AuthorsStore'
 import toastr from 'toastr'
 
-class CreateBookPage extends React.Component {
+class CreateBook extends React.Component {
   constructor (props) {
     super(props)
 
@@ -69,4 +69,4 @@ class CreateBookPage extends React.Component {
   }
 }
 
-export default CreateBookPage
+export default CreateBook

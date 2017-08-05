@@ -13,7 +13,7 @@ export default class HomePage extends React.Component {
 
   componentDidMount () {
     data.getBooks().then(books => {
-      books = books.sort((a, b) => new Date(b.date) - new Date(a.date))
+      books = books.sort((a, b) => b.date - a.date)
       let authorsPromises = []
       for (let book of books) {
         authorsPromises.push(data.getAuthorByBook(book.id))
@@ -36,7 +36,7 @@ export default class HomePage extends React.Component {
   }
 
   render () {
-    let bookNodes = this.state.books.map(b => {
+    let renderBooks = this.state.books.slice(0, 6).map(b => {
       return (
         <div className='book' key={b.id}>
           <Link to={`/books/${b.id}`}>
@@ -50,7 +50,7 @@ export default class HomePage extends React.Component {
 
     return (
       <div>
-        {bookNodes}
+        {renderBooks}
       </div>
     )
   }

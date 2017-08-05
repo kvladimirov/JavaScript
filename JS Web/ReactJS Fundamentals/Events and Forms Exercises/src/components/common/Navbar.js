@@ -26,14 +26,15 @@ class Navbar extends React.Component {
   render () {
     return (
       <div className='menu'>
+        <Link to='/'>Books Blog</Link>
         {Auth.isUserAuthenticated() ? (
           <div>
             <Link to='/'>Home</Link>
             <span>{this.state.username}</span>
-            <Link to='/authors/all'>All authors</Link>
             <Link to='/books/all'>All books</Link>
-            <Link to='/authors/add'>Add author</Link>
+            <Link to='/authors/all'>All authors</Link>
             <Link to='/books/add'>Add book</Link>
+            <Link to='/authors/add'>Add author</Link>
             <Link to='/users/logout'>Logout</Link>
           </div>
         ) : (

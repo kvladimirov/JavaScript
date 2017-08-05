@@ -9,14 +9,14 @@ export default class Header extends React.Component {
   render () {
     return (
       <header>
-        <Link to='/'>Book Store</Link>
+        <Link to='/'>Books Blog</Link>
         <nav>
           <ul>
             <li>
-              <Link to='/books/all'>All books</Link>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to='/books/create'>Create Book</Link>
+              <Link to='/books/all'>All books</Link>
             </li>
             <li>
               <Link to='/authors/all'>All authors</Link>

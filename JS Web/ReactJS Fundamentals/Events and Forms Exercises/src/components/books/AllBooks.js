@@ -8,8 +8,13 @@ export default class AllBooks extends React.Component {
     super(props)
 
     this.state = {
-      books: []
+      books: [],
+      currentPage: 1,
+      booksPerPage: 10
     }
+
+    this.handleClick = this.handleClick.bind(this)
+    this.onSortingChange = this.onSortingChange.bind(this)
 
     BooksStore.on('change', () => {
       this.getBooks()
@@ -19,7 +24,7 @@ export default class AllBooks extends React.Component {
   getBooks () {
     let authors = AuthorsStore.getAll()
     let books = BooksStore.getAll().filter(b => authors.some(a => a.books.includes(b.id)))
-    books = books.sort((a, b) => new Date(a.date) - new Date(b.date))
+    books = books.sort((a, b) => a.date - b.date)
     for (let book of books) {
       book.authorName = AuthorsStore.getAuthorByBook(book.id).name
     }
@@ -32,46 +37,86 @@ export default class AllBooks extends React.Component {
     this.getBooks()
   }
 
-  sortByDate () {
-    this.setState(prevState => ({
-      books: prevState.books.sort((a, b) => new Date(a.date) - new Date(b.date))
-    }))
+  handleClick (event) {
+    this.setState({
+      currentPage: Number(event.target.id)
+    })
   }
 
-  sortByAuthor () {
-    this.setState(prevState => ({
-      books: prevState.books.sort((a, b) => a.authorName.localeCompare(b.authorName))
-    }))
-  }
+  onSortingChange (value) {
+    if (value === 'date') {
+      this.setState(prevState => ({
+        books: prevState.books.sort((a, b) => a.date - b.date)
+      }))
+    }
 
-  sortByTitle () {
-    this.setState(prevState => ({
-      books: prevState.books.sort((a, b) => a.title.localeCompare(b.title))
-    }))
+    if (value === 'author') {
+      this.setState(prevState => ({
+        books: prevState.books.sort((a, b) => a.authorName.localeCompare(b.authorName))
+      }))
+    }
+
+    if (value === 'title') {
+      this.setState(prevState => ({
+        books: prevState.books.sort((a, b) => a.title.localeCompare(b.title))
+      }))
+    }
   }
 
   render () {
-    let bookNodes = this.state.books.map(b => {
+    const { books, currentPage, booksPerPage } = this.state
+
+    // Logic for displaying books
+    const indexOfLastBook = currentPage * booksPerPage
+    const indexOfFirstBook = indexOfLastBook - booksPerPage
+    const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook)
+
+    let renderBooks = currentBooks.map(b => {
       return (
-        <div className='book' key={b.id}>
-          <Link to={`/books/${b.id}`}>
-            <img src={b.image} alt='cover' />
-            <h3>{b.title}</h3>
-          </Link>
-          <p>Author: <Link to={`/authors/${b.author}`}>{b.authorName}</Link></p>
+        <div>
+          <div className='book' key={b.id}>
+            <Link to={`/books/${b.id}`}>
+              <img src={b.image} alt='cover' />
+              <h3>{b.title}</h3>
+            </Link>
+            <p>Author: <Link to={`/authors/${b.author}`}>{b.authorName}</Link></p>
+            <br /><br />
+          </div>
         </div>
+      )
+    })
+
+    // Logic for displaying page numbers
+    const pageNumbers = []
+    for (let i = 1; i <= Math.ceil(books.length / booksPerPage); i++) {
+      pageNumbers.push(i)
+    }
+
+    const renderPageNumbers = pageNumbers.map(number => {
+      return (
+        <button
+          key={number}
+          id={number}
+          onClick={e => this.handleClick(e)}>
+          {number}
+        </button>
       )
     })
 
     return (
       <div>
         <h1>All Books:</h1>
-        <p>Sort:
-          <button onClick={this.sortByDate.bind(this)}>Date</button>
-          <button onClick={this.sortByAuthor.bind(this)}>Author</button>
-          <button onClick={this.sortByTitle.bind(this)}>Title</button>
-        </p>
-        {bookNodes}
+        <label>Select sorting: </label>
+        <select onChange={e => this.onSortingChange(e.target.value)}>
+          <option value='date'>byDate</option>
+          <option value='author'>byAuthor</option>
+          <option value='title'>byTitle</option>
+        </select>
+        <br /><br />
+        {renderBooks}
+        <ul id='page-numbers'>
+          {renderPageNumbers}
+        </ul>
       </div>
     )
   }

@@ -1,50 +1,21 @@
+div {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
-.authorInfo {
-  text-align: center;
-}
-.authorInfo > img {
-  width: 100px;
-  border-radius: 50%;
-}
-
-.authorInfo h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 40px 0 0 70px;
-}
-
-.author {
-  width: 31%;
-  display: inline-block;
-  background-color: #dddddd;
-  margin: 1%;
-}
-
-.author h3 {
-  display: inline-block;
-  color: brown;
-  vertical-align: top;
-  margin-top: 45px;
-}
-
-.author img {
-  width: 100px;
-  margin-right: 30px;
-  border-radius: 50%;
-}
-
-.authorDetails h3 {
-  text-align: center;
-}
-
 .book {
   display: inline-block;
-  width: 30%;
+  width: 50%;
   vertical-align: top;
   margin: 1%
 }
@@ -55,7 +26,7 @@ body {
 }
 
 .book img {
-  width: 100px;
+  width: 250px;
   float: left;
   margin: 0 20px 20px 0;
 }
@@ -68,73 +39,7 @@ body {
   text-align: justify;
 }
 
-.book-info img {
-  float: left;
-  width: 200px;
-  margin-right: 40px;
-}
-
-.book-info h2 {
-  margin-top: 0;
-  padding-top: 20px;
-}
-
-.form {
-  width: 50%;
-}
-
-.center-form {
-  margin: 0 auto;
-}
-
-.form-group label {
-  font-size: 1.2em;
-  width: 30%;
-  display: inline-block;
-  text-align: end;
-  padding-right: 10px;
-  vertical-align: top;
-}
-
-.btn {
-  padding: 10px;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-  color: inherit;
-  display: inline-block;
-  text-decoration-line: none;
-  margin: 5px;
-}
-
-.btn:hover {
-  cursor: pointer;
-}
-
-.btn-primary {
-  color: #ffffff;
-  background-color: #2fa4e7;
-  border-color: #2fa4e7;
-}
-
-.btn-success {
-  color: #ffffff;
-  background-color: #73a839;
-  border-color: #73a839;
-}
-
-.btn-warning {
-  color: #ffffff;
-  background-color: #dd5600;
-  border-color: #dd5600;
-}
-
-.btn-danger {
-  color: #ffffff;
-  background-color: #c71c22;
-  border-color: #c71c22;
-}
-
-.form-btn {
-  display: block;
-  margin-left: calc(30% + 15px);
+.author img {
+  width: 400px;
+  height: 400px;
 }

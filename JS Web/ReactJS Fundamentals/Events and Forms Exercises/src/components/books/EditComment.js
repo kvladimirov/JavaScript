@@ -3,7 +3,7 @@ import CommentStore from '../../stores/CommentsStore'
 import CommentsActions from '../../actions/CommentsActions'
 import toastr from 'toastr'
 
-class EditCommentPage extends React.Component {
+class EditComment extends React.Component {
   constructor (props) {
     super(props)
 
@@ -54,4 +54,4 @@ class EditCommentPage extends React.Component {
   }
 }
 
-export default EditCommentPage
+export default EditComment

@@ -5,14 +5,14 @@ import AuthorActions from '../../actions/AuthorsActions'
 import AuthorStore from '../../stores/AuthorsStore'
 import toastr from 'toastr'
 
-class CreateAuthorPage extends React.Component {
+class CreateAuthor extends React.Component {
   constructor (props) {
     super(props)
 
     this.state = {
       author: {
-        name: 'Paulo Coelho',
-        image: 'http://www.bulacemagazine.com/wp-content/uploads/2016/08/Paulo-Coelho-Hd-Photos.jpg'
+        name: 'Тери Пратчет',
+        image: 'http://orangecenter.bg/blog/wp-content/uploads/2017/07/220px-10.12.12TerryPratchettByLuigiNovi1.jpg'
       },
       error: ''
     }
@@ -52,4 +52,4 @@ class CreateAuthorPage extends React.Component {
   }
 }
 
-export default CreateAuthorPage
+export default CreateAuthor
