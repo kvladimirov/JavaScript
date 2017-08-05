@@ -1,0 +1,106 @@
+<div class="container">
+    <h1>Create new car</h1>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <form (ngSubmit)="submitCar()" #carForm="ngForm">
+          <div class="form-group">
+            <label for="make">Make:</label>
+            <input 
+               type="text" 
+               class="form-control" 
+               id="make"
+               name="make" 
+               [(ngModel)]="car.make"
+               required
+               #make="ngModel" />
+            <div [hidden]="make.valid || make.pristine" class="alert alert-danger">
+               Make is required!
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="model">Model:</label>
+            <input 
+               type="text" 
+               class="form-control" 
+               id="model"
+               name="model" 
+               [(ngModel)]="car.model" 
+               required
+               #model="ngModel" />
+            <div [hidden]="model.valid || model.pristine" class="alert alert-danger">
+               Model is required!
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="engine">Engine:</label>
+            <input 
+               type="text" 
+               class="form-control" 
+               id="engine"
+               name="engine" 
+               [(ngModel)]="car.engine" 
+               required 
+               #engine="ngModel" />
+            <div [hidden]="engine.valid || engine.pristine" class="alert alert-danger">
+               Engine is required!
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea 
+               class="form-control" 
+               cols="20" id="description"
+               name="description" 
+               [(ngModel)]="car.description"
+               required
+               #description="ngModel" ></textarea>
+            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+               Description is required!
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ownerName">Owner:</label>
+            <select 
+               class="form-control" 
+               id="ownerName"
+               name="ownerName" 
+               [(ngModel)]="car.ownerName" 
+               required
+               #owner="ngModel" >
+              <option *ngFor="let owner of owners" [value]="owner.name">{{owner.name}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input 
+               type="number" 
+               class="form-control" 
+               id="price" 
+               name="price" 
+               [(ngModel)]="car.price"
+               required 
+               #price="ngModel" />
+            <div [hidden]="price.valid || price.pristine" class="alert alert-danger">
+               Price is required!
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="image">Image:</label>
+            <input 
+               type="text" 
+               class="form-control" 
+               id="image"
+               name="image" 
+               [(ngModel)]="car.image" 
+               required 
+               #image="ngModel" />
+            <div [hidden]="image.valid || image.pristine" class="alert alert-danger">
+               Image is required!
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success"
+                  [disabled]="!carForm.form.valid" >Submit</button>
+        </form>
+      </div>
+    </div>
+</div>

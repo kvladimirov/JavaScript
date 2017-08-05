@@ -1,0 +1,17 @@
+<div>
+  <li class="car" *ngIf="car">
+    <h1><span>{{car.make}}</span> - {{car.model}}</h1>
+    <img src={{car.image}} alt={{car.make}} />
+    <p><span>Engine:</span> {{car.engine}}<p>
+    <p><span>Price:</span> ${{car.price}}<p>
+    <p><a href="/owners/{{car.owner}}"><span>Owner:</span> {{owner.name}}</a><p>
+    <p><span>Description:</span> {{car.description}}<p>   
+  </li>
+  <p><a href="/">Home</a> <a href="/cars/all">All Cars</a></p>
+</div>
+<h3>Comments: </h3>
+<div *ngFor="let comment of comments" >
+  <li>
+    <p>{{comment.message}}<p>
+  </li>
+</div>
