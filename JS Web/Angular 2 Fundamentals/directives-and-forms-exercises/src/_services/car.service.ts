@@ -43,13 +43,69 @@ export class CarService {
     return Promise.resolve(COMMENTS.filter(comment => comment.car === carId));
   }
 
-  createCar(car): void{
+  getCarByCommentId(commentId): Promise<Car> {
+    commentId = parseInt(commentId)
+    return Promise.resolve(CARS.filter(car => car.comments.indexOf(commentId) > -1)[0]);
+  }
+
+  getCommentById(commentId) {
+    commentId = parseInt(commentId)
+    return Promise.resolve(COMMENTS.find(comment => comment.id === commentId))
+  }
+
+  createCar(car): Promise<Car[]> {
     car.id = CARS.length + 1
     car.date = Date.now()
-    car.owner = OWNERS.find(owner => owner.name === car.ownerName).id
     car.comments = []
+    car.owner = parseInt(car.owner)
+    car.ownerName = OWNERS.find(owner => owner.id === car.owner).name
     CARS.push(car)
-    OWNERS.find(o => o.id === Number(car.owner)).cars.push(Number(car.id))
-    console.log(CARS)
+    OWNERS.find(owner => owner.id === car.owner).cars.push(car.id)
+    return Promise.resolve(CARS)
+  }
+
+  createOwner(owner) {
+    owner.id = OWNERS.length + 1
+    owner.cars = []
+    OWNERS.push(owner)
+  }
+
+  createComment(carId, message) {
+    carId = parseInt(carId)
+    let id = COMMENTS.length + 1
+    COMMENTS.push({
+      id: id,
+      car: carId,
+      message: message
+    })
+    CARS.find(car => car.id === carId).comments.push(id)
+  }
+
+  editCar(car, oldOwner) {
+    let editedCar = CARS.find(carData => carData.id === car.id)
+    let cars = OWNERS.find(owner => owner.id === oldOwner.id).cars
+    OWNERS.find(owner => owner.id === oldOwner.id).cars = cars.filter(c => c !== Number(car.id))
+
+    editedCar.description = car.description
+    editedCar.engine = car.engine
+    editedCar.image = car.image
+    editedCar.make = car.make
+    editedCar.model = car.model
+    editedCar.owner = parseInt(car.owner)
+    editedCar.ownerName = OWNERS.find(owner => owner.id === Number(car.owner)).name
+    editedCar.price = car.price
+    OWNERS.find(owner => owner.id === editedCar.owner).cars.push(editedCar.id)
+  }
+
+  editOwner(owner) {
+    let editOwner = OWNERS.find(ownerData => ownerData.id === owner.id)
+    editOwner.name = owner.name
+    editOwner.image = owner.image
+  }
+
+  editComment(commentId, message) {
+    commentId = parseInt(commentId)
+    let editComment = COMMENTS.find(comment => comment.id === commentId)
+    editComment.message = message
   }
 }

@@ -26,8 +26,8 @@
   <li class="owner">
     <h3>{{owner.name}}</h3>
     <img src={{owner.image}} alt={{owner.name}} />
-    <a href="/owners/{{owner.id}}">Details</a>
   </li>
+  <p><a routerLink="/owners/{{owner.id}}">Details</a></p>
 </div>
 <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
   <li [ngClass]="{disabled:pager.currentPage === 1}">

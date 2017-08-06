@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import {Router } from '@angular/router'
+import { Router } from '@angular/router'
 
 import { Car } from '../models/Car'
 import { Owner } from '../models/Owner'
@@ -24,12 +24,11 @@ export class CarFormComponent implements OnInit {
   }
 
   submitCar() {
-      console.log(this.car)
-      this.carService.createCar(this.car)
-      this.router.navigate(['./cars/all']);
+    this.carService.createCar(this.car)
+    this.router.navigate(['./cars/all'])
   }
 
   ngOnInit() {
-      this.getOwners()
+    this.getOwners()
   }
 }

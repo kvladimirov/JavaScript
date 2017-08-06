@@ -1,4 +1,4 @@
-const CARS = [
+let CARS = [
   { id: 1,
     image: 'http://images.parkers.bauercdn.com/pagefiles/201463/cut-out/600x400/merc_aclass_amg.jpg',
     make: 'Mercedes-Benz',
@@ -44,7 +44,7 @@ To find out what sets it apart, read on for our full Mercedes-Benz A 45 AMG revi
     owner: 1,
     ownerName: '',
     price: 43.770,
-    comments: [2, 3],
+    comments: [1],
     date: Date.now() + 12
   },
   { id: 2,
@@ -108,7 +108,7 @@ There are nine trim levels available from the entry-level Style that comes with 
     owner: 2,
     ownerName: '',
     price: 32.265,
-    comments: [4, 5],
+    comments: [2],
     date: Date.now() + 11
   },
   { id: 3,
@@ -170,8 +170,8 @@ The new Qashqai performs well on a road test. It’s very easy to drive with saf
     owner: 3,
     ownerName: '',
     price: 30.035,
-    comments: [6, 7],
-    date: Date.now() + 3
+    comments: [3],
+    date: Date.now() + 10
   },
   { id: 4,
     image: 'http://images.parkers.bauercdn.com/pagefiles/194691/cut-out/600x400/5527197295900725850210.jpg',
@@ -214,8 +214,8 @@ The SEAT Leon is also cheaper than many of its rivals, boasts plenty of standard
     owner: 4,
     ownerName: '',
     price: 31.805,
-    comments: [8, 9],
-    date: Date.now() + 4
+    comments: [4],
+    date: Date.now() + 9
   },
   { id: 5,
     image: 'http://images.parkers.bauercdn.com/pagefiles/204492/cut-out/600x400/bmw_1_series.jpg',
@@ -266,8 +266,8 @@ Interior tweaks were more restrained with detail changes to the dashboard and a 
     owner: 5,
     ownerName: '',
     price: 34.980,
-    comments: [],
-    date: Date.now() + 5
+    comments: [5],
+    date: Date.now() + 8
   },
   { id: 6,
     image: 'http://images.parkers.bauercdn.com/pagefiles/197511/cut-out/600x400/fiesta08.jpg',
@@ -320,8 +320,8 @@ Ford raised the stakes further in 2016 with the introduction of the Fiesta ST200
     owner: 6,
     ownerName: '',
     price: 23.015,
-    comments: [],
-    date: Date.now() + 6
+    comments: [6],
+    date: Date.now() + 7
   },
   { id: 7,
     image: 'http://images.parkers.bauercdn.com/pagefiles/196529/cut-out/600x400/volkswagen-golf-gt-02.jpg',
@@ -388,8 +388,8 @@ Most of the engines carry over as before. However, VW has added a lower-powered 
     owner: 7,
     ownerName: '',
     price: 34.650,
-    comments: [],
-    date: Date.now() + 7
+    comments: [7],
+    date: Date.now() + 6
   },
   { id: 8,
     image: 'http://images.parkers.bauercdn.com/pagefiles/203583/cut-out/600x400/bmw_3_series_saloon.jpg',
@@ -442,8 +442,8 @@ Step into a 3 Series having spent time in an Audi A4 and you’d be forgiven for
     owner: 8,
     ownerName: '',
     price: 64.225,
-    comments: [],
-    date: Date.now() + 8
+    comments: [8],
+    date: Date.now() + 5
   },
   { id: 9,
     image: 'http://images.parkers.bauercdn.com/pagefiles/201041/cut-out/600x400/vauxhall_astra_01.jpg',
@@ -492,8 +492,8 @@ Particularly impressive at night are the IntelliLux LED matrix headlight with di
     owner: 9,
     ownerName: '',
     price: 25.240,
-    comments: [],
-    date: Date.now() + 9
+    comments: [9],
+    date: Date.now() + 4
   },
   { id: 10,
     image: 'http://images.parkers.bauercdn.com/pagefiles/254205/cut-out/600x400/kia_rio.jpg',
@@ -524,8 +524,8 @@ As with all Kias, the Rio benefits from a seven-year or 100,000-mile (whichever 
     owner: 10,
     ownerName: '',
     price: 17.585,
-    comments: [],
-    date: Date.now() + 10
+    comments: [10],
+    date: Date.now() + 3
   },
   { id: 11,
     image: 'http://images.parkers.bauercdn.com/pagefiles/204119/cut-out/600x400/pug_3008.jpg',
@@ -564,8 +564,8 @@ For the full Peugeot 3008 review click through the sections below and at the top
     owner: 11,
     ownerName: '',
     price: 29.950,
-    comments: [1],
-    date: Date.now() + 1
+    comments: [11],
+    date: Date.now() + 2
   },
   { id: 12,
     image: 'http://images.parkers.bauercdn.com/pagefiles/200836/cut-out/600x400/toyota_avensis_ts.jpg',
@@ -598,8 +598,8 @@ So this is a safe, practical, comfortable and reliable estate car that is defini
     owner: 12,
     ownerName: '',
     price: 29.300,
-    comments: [],
-    date: Date.now() + 2
+    comments: [12],
+    date: Date.now() + 1
   }
 ]
 

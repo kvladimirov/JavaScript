@@ -16,6 +16,7 @@ export class CarDetailsComponent implements OnInit {
   car: Car
   owner: Owner
   comments: Comment[]
+  message: string = '';
 
   constructor(private route: ActivatedRoute, 
               private carService: CarService) {
@@ -26,7 +27,6 @@ export class CarDetailsComponent implements OnInit {
     this.carService.getCarById(carId)
       .then(car => {
         this.car = car
-        console.log(this.car)
       })
   }
 
@@ -42,6 +42,12 @@ export class CarDetailsComponent implements OnInit {
       .then(comments => {
         this.comments = comments
       })
+  }
+
+  submitComment() {
+    this.carService.createComment(this.carId, this.message)
+    this.getComments(this.carId)
+    this.message = ''
   }
  
   ngOnInit(): void {

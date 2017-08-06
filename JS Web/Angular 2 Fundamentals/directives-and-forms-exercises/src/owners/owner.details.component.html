@@ -3,16 +3,13 @@
     <h2>{{owner.name}}</h2>
     <img src={{owner.image}} alt={{owner.name}} />
   </li>
-  
+  <p><a routerLink='/owners/edit/{{ownerId}}'>Edit</a></p> 
 </div>
 <h3>Cars: </h3>
 <div *ngFor="let car of cars">
   <li class="owner">
     <h4><span>{{car.make}}</span> {{car.model}}</h4>
     <img src={{car.image}} alt={{car.make}} />
-    <p>
-      <a href="/cars/{{car.id}}">Details</a>
-      <a href="/cars/all">All Cars</a>
-    </p>
   </li>
+  <p><a routerLink="/cars/{{car.id}}">Details</a></p>
 </div>

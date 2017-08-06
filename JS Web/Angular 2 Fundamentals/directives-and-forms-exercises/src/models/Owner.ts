@@ -1,6 +1,8 @@
 export class Owner {
-  id: number;
-  image: string;
-  name: string;
-  cars: number[]
+  constructor(
+    public image: string,
+    public name: string,
+    public cars?: number[],
+    public id?: number
+  ) {}
 }

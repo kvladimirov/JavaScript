@@ -1,7 +1,7 @@
 <div *ngFor="let car of cars">
   <li class="car">
     <h3><span>{{car.make}}</span> - {{car.model}}</h3>
-    <img src={{car.image}} alt={{car.make}} />
-    <p><a href="/cars/{{car.id}}">Details</a> <a href="/owners/{{car.owner}}">View owner</a></p>
+    <img src={{car.image}} border-radius alt={{car.make}} />
   </li>
+  <p><a routerLink="/cars/{{car.id}}">Details</a> <a routerLink="/owners/{{car.owner}}">View owner</a></p>
 </div>
