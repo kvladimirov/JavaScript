@@ -14,5 +14,4 @@ export class UsersService{
     login(user) {
         return this.httpService.post('auth/login', user)
     }
-
 }

@@ -41,7 +41,6 @@ export function usersReducer(state = initialState, action){
             return userLogin(state, action)
         case USER_LOGOUT:
             return userLogout(state, action)
-
         default:
             return state    
     }
